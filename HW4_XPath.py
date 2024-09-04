@@ -10,7 +10,7 @@ headers = {
 }
 
 
-# Извлечение информации с новостной страницы
+# Извлечение информации со страницы
 def get_news_info(_url):
     data = {}
     print(f"парсинг страницы: {_url}")
@@ -28,7 +28,7 @@ def get_news_info(_url):
     # Дата и время публикации
     date_time = dom.xpath("//div[@data-article-index='0']//time/@datetime")
 
-    # Заголовок новсти
+    # Заголовок
     title = dom.xpath("//div[@data-article-index='0']//h1/text()")
 
     # Короткое описание
